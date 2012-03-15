@@ -84,6 +84,13 @@ namespace :mongodb do
     puts cmd
     system cmd
   end
+  
+  desc "Run the mongodb shell"
+  task :shell do
+    cmd = "#{CONFIG[:mongodb][:home]}/bin/mongo"
+    puts cmd
+    system cmd
+  end
 end
 
 # task :default => ["namespace::task_name"]
